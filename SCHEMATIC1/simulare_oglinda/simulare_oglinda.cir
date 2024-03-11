@@ -1,0 +1,22 @@
+** Profile: "SCHEMATIC1-simulare_oglinda"  [ c:\users\maria\onedrive - technical university of cluj-napoca\desktop\proiect_cad_uwu\nascamarianproiectcad-pspicefiles\schematic1\simulare_oglinda.sim ] 
+
+** Creating circuit file "simulare_oglinda.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\22.1.0\PSpice.ini file:
+.lib "C:\Users\maria\OneDrive - Technical University of Cluj-Napoca\Desktop\PROIECT_CAD_UwU\NascaMarianProiectCAD-PSpiceFiles\SCHEM"
++ "ATIC1\DiodaAlbastra.lib" 
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 10ms 0 
+.STEP LIN PARAM r 14k 24k 1k 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+.END

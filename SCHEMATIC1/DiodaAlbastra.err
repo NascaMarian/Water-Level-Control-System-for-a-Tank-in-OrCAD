@@ -1,0 +1,8 @@
+STATUS: PSpice Schematics to Capture translator (22.1.0.d001)
+STATUS:  
+STATUS: Translator started at Sunday, July 02, 2023 20:47:11
+STATUS: C:\Cadence\SPB_22.1\tools\bin\sch2cap -f "C:\Users\maria\OneDrive - Technical University of Cluj-Napoca\Desktop\PROIECT_CAD_UwU\NascaMarianProiectCAD-PSpiceFiles\SCHEMATIC1\DiodaAlbastra.lib" -o "C:\Users\maria\OneDrive - Technical University of Cluj-Napoca\Desktop\PROIECT_CAD_UwU\NascaMarianProiectCAD-PSpiceFiles\SCHEMATIC1\DiodaAlbastra.olb" -i C:\SPB_Data\.\cdssetup\OrCAD_PSpice/22.1.0/PSpice.ini -s DiodaAlbastra
+INFO(ORSCH-1029): Using existing library 'C:\Cadence\SPB_22.1\tools\Capture\Library\PSpice\modeled.etc'.
+INFO(ORSCH-1031): Created new library 'C:\Users\maria\OneDrive - Technical University of Cluj-Napoca\Desktop\PROIECT_CAD_UwU\NascaMarianProiectCAD-PSpiceFiles\SCHEMATIC1\DiodaAlbastra.olb'.
+STATUS: Translator stopped at Sunday, July 02, 2023 20:47:11
+STATUS: 0 Error messages, 0 Warning messages

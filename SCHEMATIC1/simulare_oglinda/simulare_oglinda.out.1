@@ -1,0 +1,49 @@
+
+**** 07/02/23 17:17:56 **** PSpice 22.1.0 (6 October 2022) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-simulare_oglinda"  [ C:\Users\maria\OneDrive - Technical University of Cluj-Napoca\Desktop\PROIECT_CAD_UwU\N
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "simulare_oglinda.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\22.1.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.DC LIN V1 0 10s 100n 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source NASCAMARIANPROIECTCAD
+.EXTERNAL OUTPUT -VCC
+.EXTERNAL OUTPUT +VCC
+Q_Q1         N14397 N14397 +VCC Q2SA562
+Q_Q2         N14486 N14397 +VCC Q2SA562
+R_R1         0 N14397  26.48k TC=0,0 
+R_RezistentaSenzor         0 N14486  {r} TC=0,0 
+V_VCC         +VCC 0 +15V
+V_-VCC         -VCC 0 -15V
+.PARAM  r=14k
+
+**** RESUMING simulare_oglinda.cir ****
+.END
+
+
+ERROR(ORPSIM-15090): DC device V1 is undefined
+

@@ -1,0 +1,4 @@
+ lib="C:\Users\maria\OneDrive - Technical University of Cluj-Napoca\Desktop\PROIECT_CAD_UwU\NascaMarianProiectCAD-PSpiceFiles\SCHEMATIC1\DiodaAlbastra.lib", offset=1049, size=65
+ lib=C:\Cadence\SPB_22.1\tools\PSpice\Library\jbipolar.lib, offset=26934, size=316
+ lib=C:\Cadence\SPB_22.1\tools\PSpice\Library\bipolar.lib, offset=9237, size=314
+ lib=C:\Cadence\SPB_22.1\tools\PSpice\Library\opamp.lib, offset=35313, size=1088

@@ -1,0 +1,92 @@
+
+**** 07/03/23 18:26:32 **** PSpice 22.1.0 (6 October 2022) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-sim_MontCarl"  [ C:\Users\maria\OneDrive - Technical University of Cluj-Napoca\Desktop\PROIECT_CAD_UwU\Nasca
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "sim_MontCarl.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\22.1.0\PSpice.ini file:
+.lib "C:\Users\maria\OneDrive - Technical University of Cluj-Napoca\Desktop\PROIECT_CAD_UwU\NascaMarianProiectCAD-PSpiceFiles\SCHEM"
++ "ATIC1\DiodaAlbastra.lib" 
+.lib "nom.lib" 
+
+*Analysis directives: 
+.DC LIN V(out) 0 10 0.1 
+----------$
+ERROR(ORPSIM-16152): Invalid number: Error while converting token 'out' to double value. Token can be a constant or expression
+.MC 40 DC V([OUT]) YMAX OUTPUT ALL SEED=450 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source NASCAMARIANPROIECTCAD
+.EXTERNAL OUTPUT +VCC
+.EXTERNAL OUTPUT -VCC
+Q_Q1         N14397 N14397 +VCC Q2SA562
+Q_Q2         N14486 N14397 +VCC Q2SA562
+R_RezistentaSenzor         0 N14486 R_RezistentaSenzor {r} TC=0,0 
+.model        R_RezistentaSenzor RES R=1 DEV=0.5% TC1=0 TC2=0
+V_V1         +VCC 0 15Vdc
+V_V2         -VCC 0 -15Vdc
+X_U2         N15935 VREF +VCC -VCC VREF LM118
+R_R6         +VCC N15935 R_R6 1.04k TC=0,0 
+.model        R_R6 RES R=1 DEV=0.5% TC1=0 TC2=0
+R_R7         0 N15935 R_R7 1.06k TC=0,0 
+.model        R_R7 RES R=1 DEV=0.5% TC1=0 TC2=0
+X_U3         N16344 N16580 +VCC -VCC OUT LM118
+R_R4         N15621 N16344 R_R4 2k TC=0,0 
+.model        R_R4 RES R=1 DEV=0.5% TC1=0 TC2=0
+R_R5         0 N16344  4.7k TC=0,0 
+R_R3         N16580 OUT R_R3 4.7k TC=0,0 
+.model        R_R3 RES R=1 DEV=0.5% TC1=0 TC2=0
+R_R2         VREF N16580 R_R2 2k TC=0,0 
+.model        R_R2 RES R=1 DEV=0.5% TC1=0 TC2=0
+X_U4         N14486 N15621 +VCC -VCC N15621 LM118
+X_U5         N18284 OUT +VCC -VCC N18389 LM118
+R_R11         0 N18090 R_R11 10 TC=0,0 
+.model        R_R11 RES R=1 DEV=0.5% TC1=0 TC2=0
+R_R10         +VCC N18090 R_R10 3.97 TC=0,0 
+.model        R_R10 RES R=1 DEV=0.5% TC1=0 TC2=0
+X_U6         N18090 VREF2 +VCC -VCC VREF2 LM118
+R_R8         VREF2 N18284 R_R8 1k TC=0,0 
+.model        R_R8 RES R=1 DEV=0.5% TC1=0 TC2=0
+R_R9         N18284 N18389 R_R9 4.27k TC=0,0 
+.model        R_R9 RES R=1 DEV=0.5% TC1=0 TC2=0
+V_V3         N18859 0 15V
+D_D1         N18859 N18863 DiodaAlbastra 
+R_RdiodaTest         0 N18863  630 TC=0,0 
+R_R12         N18389 N20331 R_R12 402 TC=0,0 
+.model        R_R12 RES R=1 DEV=0.5% TC1=0 TC2=0
+D_D2         N198520 0 DiodaAlbastra 
+Q_Q3         N20016 N20012 0 Q2N1566
+R_RLimitare         N18389 N20012 R_RLimitare 1k TC=0,0 
+.model        R_RLimitare RES R=1 DEV=0.5% TC1=0 TC2=0
+R_R14         N20016 +VCC R_R14 3.4k TC=0,0 
+.model        R_R14 RES R=1 DEV=0.5% TC1=0 TC2=0
+R_R13         N20331 N198520 R_R13 229 TC=0,0 
+.model        R_R13 RES R=1 DEV=0.5% TC1=0 TC2=0
+R_R0         N204421 N14397 R_R0 20k TC=0,0 
+.model        R_R0 RES R=1 DEV=0.5% TC1=0 TC2=0
+R_R1         0 N204421 R_R1 6.49k TC=0,0 
+.model        R_R1 RES R=1 DEV=0.5% TC1=0 TC2=0
+.PARAM  r=14k
+
+**** RESUMING sim_MontCarl.cir ****
+.END
+

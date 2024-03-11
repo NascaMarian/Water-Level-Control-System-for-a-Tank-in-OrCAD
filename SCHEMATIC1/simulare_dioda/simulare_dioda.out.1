@@ -1,0 +1,70 @@
+
+**** 07/02/23 21:49:53 **** PSpice 22.1.0 (6 October 2022) **** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-simulare_dioda"  [ C:\Users\maria\OneDrive - Technical University of Cluj-Napoca\Desktop\PROIECT_CAD_UwU\Nas
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "simulare_dioda.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\22.1.0\PSpice.ini file:
+.lib "C:\Users\maria\OneDrive - Technical University of Cluj-Napoca\Desktop\PROIECT_CAD_UwU\NascaMarianProiectCAD-PSpiceFiles\SCHEM"
++ "ATIC1\DiodaAlbastra.lib" 
+.lib "nom.lib" 
+
+*Analysis directives: 
+.DC LIN VCC 0 15 0.001 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source NASCAMARIANPROIECTCAD
+.EXTERNAL OUTPUT +VCC
+.EXTERNAL OUTPUT -VCC
+Q_Q1         N14397 N14397 +VCC Q2SA562
+Q_Q2         N14486 N14397 +VCC Q2SA562
+R_R1         0 N14397  26.48k TC=0,0 
+R_RezistentaSenzor         0 N14486  {r} TC=0,0 
+V_V1         +VCC 0 15Vdc
+V_V2         -VCC 0 -15Vdc
+X_U2         N15935 VREF +VCC -VCC VREF LM118
+R_R6         +VCC N15935  1.04k TC=0,0 
+R_R7         0 N15935  1.06k TC=0,0 
+X_U3         N16344 N16580 +VCC -VCC N16671 LM118
+R_R4         N15621 N16344  2k TC=0,0 
+R_R5         0 N16344  4.7k TC=0,0 
+R_R3         N16580 N16671  4.7k TC=0,0 
+R_R2         VREF N16580  2k TC=0,0 
+X_U4         N14486 N15621 +VCC -VCC N15621 LM118
+X_U5         N18284 N16671 +VCC -VCC N18389 LM118
+R_R11         0 N18090  10 TC=0,0 
+R_R10         +VCC N18090  3.97 TC=0,0 
+X_U6         N18090 VREF2 +VCC -VCC VREF2 LM118
+R_R8         VREF2 N18284  1k TC=0,0 
+R_R9         N18284 N18389  4.27k TC=0,0 
+V_V3         N18859 0 15V
+D_D1         N18859 N18863 DiodaAlbastra 
+R_RdiodaTest         0 N18863  630 TC=0,0 
+D_D2         N192690 0 DiodaAlbastra 
+R_RezDioda         N192690 N18389  630 TC=0,0 
+.PARAM  r=14k
+
+**** RESUMING simulare_dioda.cir ****
+.END
+
+ERROR(ORPSIM-15090): DC device VCC is undefined
+

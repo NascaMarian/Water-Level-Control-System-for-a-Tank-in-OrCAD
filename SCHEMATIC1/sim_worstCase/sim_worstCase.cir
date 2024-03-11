@@ -1,0 +1,22 @@
+** Profile: "SCHEMATIC1-sim_worstCase"  [ c:\users\maria\onedrive - technical university of cluj-napoca\desktop\proiect_cad_uwu\nascamarianproiectcad-PSpiceFiles\SCHEMATIC1\sim_worstCase.sim ] 
+
+** Creating circuit file "sim_worstCase.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\22.1.0\PSpice.ini file:
+.lib "C:\Users\maria\OneDrive - Technical University of Cluj-Napoca\Desktop\PROIECT_CAD_UwU\NascaMarianProiectCAD-PSpiceFiles\SCHEM"
++ "ATIC1\DiodaAlbastra.lib" 
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 1000ns 0 
+.WCASE TRAN V([OUT2]) YMAX VARY BOTH  HI 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+.END
